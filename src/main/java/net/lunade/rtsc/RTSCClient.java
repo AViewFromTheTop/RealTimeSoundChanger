@@ -11,7 +11,6 @@ public class RTSCClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        configManager.createConfig();
         try {
             realTimeSoundWriter.writeSoundsJSON();
         } catch (FileNotFoundException e) {
