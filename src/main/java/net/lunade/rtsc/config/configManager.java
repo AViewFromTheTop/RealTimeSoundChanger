@@ -37,11 +37,13 @@ public class configManager {
 
     public static boolean isEnabled() throws FileNotFoundException {
         if (!writing) {
-            InputStream input = new FileInputStream(dir);
-            JsonReader read = Json.createReader(input);
-            JsonObject json = read.readObject();
-            read.close();
-            return json.getBoolean("enabled");
+            if (dir.exists()) {
+                InputStream input = new FileInputStream(dir);
+                JsonReader read = Json.createReader(input);
+                JsonObject json = read.readObject();
+                read.close();
+                return json.getBoolean("enabled");
+            }
         } return false;
     }
 
