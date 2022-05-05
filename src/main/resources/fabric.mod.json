@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "rtsc",
+  "version": "${version}",
+
+  "name": "Real-Time Sound Changer",
+  "description": "Allows the changing of individual block's sounds, just by dragging and dropping .ogg files!",
+  "authors": [
+    "Lunade"
+  ],
+  "contact": {
+
+  },
+
+  "license": "GPL-3.0",
+  "icon": "",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.lunade.rtsc.RTSCClient"
+    ]
+  },
+  "mixins": [
+    "rtsc.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.4",
+    "fabric": ">=0.52.1",
+    "minecraft": "1.19.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
