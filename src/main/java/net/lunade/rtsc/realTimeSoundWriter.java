@@ -24,18 +24,18 @@ public class realTimeSoundWriter {
         FileWriter mcMetaWriter = null;
 
         try {
+            File mcMeta = new File(directory, "pack.mcmeta");
+            mcMetaWriter = new FileWriter(mcMeta);
+        }
+        catch (IOException e) { e.printStackTrace(); }
+        
+        try {
             File namespace = new File(directory1, "minecraft");
             namespace.mkdirs();
             File jsonFile = new File(namespace, "sounds.json");
             writer = new FileWriter(jsonFile);
         }
         catch (IOException e) { e.printStackTrace(); }
-        try {
-            File mcMeta = new File(directory, "pack.mcmeta");
-            mcMetaWriter = new FileWriter(mcMeta);
-        }
-        catch (IOException e) { e.printStackTrace(); }
-
         JsonGenerator mcGen = Json.createGenerator(mcMetaWriter);
         mcGen.writeStartObject();
         mcGen.writeStartObject("pack");
