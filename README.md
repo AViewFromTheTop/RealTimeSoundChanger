@@ -11,16 +11,21 @@ Lets you control each individual sound of Minecraft's blocks by only dragging an
 
 # FAQ:
 Q: Do I have to worry about creating the resource pack?
+
 A: Nope! This mod automatically creates it for you.
 
 Q: Do I have to edit sounds.json for this to work?
+
 A: Nope! Once again, this mod automatically creates sounds.json each time Minecraft launches.
 
 Q: Is there a way to turn this off?
+
 A: There is! Run the command /rtsc disable to disable your custom sounds, and /rtsc enable to re-enable them.
 
 Q: My sounds won't play, what am I doing wrong?
+
 A: All sounds must be in the .ogg format, and can only have ONE channel; they can not be stereo. If you've done this and they still won't play, make sure the resource pack named "new_sounds" is applied.
 
 Q: I deselected the resource pack, and now the block sounds won't play!
+
 A: Be sure to always keep the resource pa
