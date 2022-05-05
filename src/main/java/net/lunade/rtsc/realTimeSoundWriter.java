@@ -1,6 +1,6 @@
 package net.lunade.rtsc;
 
-import net.lunade.rtsc.BlockSoundGroupOverwrites;
+import net.lunade.rtsc.block.BlockSoundGroupOverwrites;
 import net.minecraft.block.Block;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.sound.BlockSoundGroup;
@@ -15,7 +15,6 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class realTimeSoundWriter {
-
     public static void writeSoundsJSON() throws FileNotFoundException {
         MinecraftClient client = MinecraftClient.getInstance();
         File directory = new File(client.getResourcePackDir(), "new_sounds");

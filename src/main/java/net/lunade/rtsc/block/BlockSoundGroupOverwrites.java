@@ -1,4 +1,4 @@
-package net.lunade.rtsc;
+package net.lunade.rtsc.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.sound.BlockSoundGroup;
@@ -40,6 +40,13 @@ public class BlockSoundGroupOverwrites {
     public static void addNamespace(String nameSpace, BlockSoundGroup sounds) {
         namespaces.add(nameSpace);
         namespaceSoundGroups.add(sounds);
+    }
+
+    public static void removeAll() {
+        ids.clear();
+        soundGroups.clear();
+        namespaces.clear();
+        namespaceSoundGroups.clear();
     }
 
     public static List<Identifier> ids = new ArrayList<>();
