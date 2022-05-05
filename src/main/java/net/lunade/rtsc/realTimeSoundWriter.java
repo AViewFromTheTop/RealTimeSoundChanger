@@ -26,6 +26,7 @@ public class realTimeSoundWriter {
         try {
             File namespace = new File(directory1, "minecraft");
             File jsonFile = new File(namespace, "sounds.json");
+            namespace.mkdirs();
             writer = new FileWriter(jsonFile);
         }
         catch (IOException e) { e.printStackTrace(); }
@@ -34,8 +35,6 @@ public class realTimeSoundWriter {
             mcMetaWriter = new FileWriter(mcMeta);
         }
         catch (IOException e) { e.printStackTrace(); }
-        JsonGenerator generator = Json.createGenerator(writer);
-        generator.writeStartObject();
 
         JsonGenerator mcGen = Json.createGenerator(mcMetaWriter);
         mcGen.writeStartObject();
@@ -43,7 +42,9 @@ public class realTimeSoundWriter {
         mcGen.write("pack_format", 9);
         mcGen.write("description", "Allows you to control each individual block's sounds by adding sounds to each block's respective folder.");
         mcGen.writeEnd(); mcGen.writeEnd(); mcGen.close();
-
+        
+        JsonGenerator generator = Json.createGenerator(writer);
+        generator.writeStartObject();
         for (Block entry : Registry.BLOCK) {
             if (Objects.equals(Registry.BLOCK.getId(entry).getNamespace(), "minecraft")) {
                 File namespace = new File(directory1, Registry.BLOCK.getId(entry).getNamespace());
