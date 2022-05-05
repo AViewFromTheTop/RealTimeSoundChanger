@@ -1,9 +1,3 @@
-# Wilder Wild Update
+# Real-Time Sound Changer
 
-Add Extra Features to the Wild Update!
-
----
-Building:
-* Clone the repository
-* Run the "gradlew build" command in the repository folder
-* Look in ./build/libs for the mod .jar
+Lets you control each individual sound of Minecraft's blocks by only dragging and dropping .ogg files!
