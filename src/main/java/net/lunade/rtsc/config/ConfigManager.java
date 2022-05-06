@@ -9,7 +9,7 @@ import javax.json.stream.JsonGenerator;
 import java.io.*;
 import java.nio.file.Files;
 
-public class configManager {
+public class ConfigManager {
 
     public static File initial = FabricLoader.getInstance().getConfigDirectory();
     public static File dir2 = new File(initial, "rtsc");

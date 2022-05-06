@@ -2,7 +2,7 @@ package net.lunade.rtsc;
 
 import com.mojang.brigadier.CommandDispatcher;
 import net.fabricmc.fabric.api.client.command.v1.FabricClientCommandSource;
-import net.lunade.rtsc.config.configManager;
+import net.lunade.rtsc.config.ConfigManager;
 
 import java.io.FileNotFoundException;
 
@@ -34,12 +34,12 @@ public class EnableDisableCommand {
     }
 
     private static int disable() throws FileNotFoundException {
-        configManager.setEnabled(false);
+        ConfigManager.setEnabled(false);
         return 1;
     }
 
     private static int enable() throws FileNotFoundException {
-        configManager.setEnabled(true);
+        ConfigManager.setEnabled(true);
         return 1;
     }
 

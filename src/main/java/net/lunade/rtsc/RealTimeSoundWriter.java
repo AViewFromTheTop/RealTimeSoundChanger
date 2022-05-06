@@ -14,7 +14,7 @@ import java.io.*;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class realTimeSoundWriter {
+public class RealTimeSoundWriter {
     public static void writeSoundsJSON() throws FileNotFoundException {
         MinecraftClient client = MinecraftClient.getInstance();
         File directory = new File(client.getResourcePackDir(), "new_sounds");
