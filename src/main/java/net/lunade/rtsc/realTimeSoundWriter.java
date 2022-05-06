@@ -127,7 +127,7 @@ public class realTimeSoundWriter {
                         generator.write("block/" + Registry.BLOCK.getId(entry).getPath() + "/fall/" + addString);
                     }
                     generator.writeEnd();
-                    generator.write("subtitle", "subtitles.block.generic.fall");
+                    generator.write("subtitle", "subtitles.block.generic.land");
                     generator.writeEnd();
                 }
                 BlockSoundGroup newSounds = new BlockSoundGroup(1.0F, 1.0F,
